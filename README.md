@@ -29,13 +29,13 @@ To set up and use HealthyAI, follow these steps:
 ### 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/sharadChauhan7/Health-Assistant.git
+   git clone https://github.com/yashsharma0730/Vital_AI.git
    ```
 
 
 ### 2. Access the Application
 
-Visit [https://healthyai.netlify.app/](https://healthyai.netlify.app/) in your browser to start using HealthyAI.
+Visit 
 
 ## Usage
 
@@ -61,8 +61,6 @@ This project is open-source and does not have a specific license. Feel free to u
 ## Contact
 
 For inquiries or support related to HealthyAI, please reach out via:
-
-- Instagram: [ Instagram ](https://www.instagram.com/sharad.s.chauhan/reels)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sharad-chauhan-24a62126a/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/yashsharma0730)
 
 Your feedback and suggestions are greatly appreciated!
