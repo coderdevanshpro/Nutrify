@@ -151,7 +151,7 @@ const MicrophoneButton = () => {
                     <div className="   right-0 mr-4 bg-white p-6 rounded-lg border border-gray-200 w-[80%] h-[85%] shadow-md">
                         <div className="flex flex-col space-y-1.5 pb-6">
                             <h2 className="font-semibold text-lg">Nutrify AI</h2>
-                            <p className="text-sm text-gray-500">Powered by Sharad and Subham</p>
+                            <p className="text-sm text-gray-500">Powered by Yash Sharma</p>
                         </div>
 
                         <div className="pr-4 h-[474px] overflow-y-auto">
