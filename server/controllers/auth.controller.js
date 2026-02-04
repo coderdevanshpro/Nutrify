@@ -1,7 +1,7 @@
 import User from '../modals/user.modal.js'
 import jwt from 'jsonwebtoken';
 import 'dotenv/config'
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 export const signup = async (req, res) => {
     try {    

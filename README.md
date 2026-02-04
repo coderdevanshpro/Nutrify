@@ -29,7 +29,7 @@ To set up and use HealthyAI, follow these steps:
 ### 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yashsharma0730/Vital_AI.git
+   git clone https://github.com/yashsharma0730/Vexo_AI.git
    ```
 
 

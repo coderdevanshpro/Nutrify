@@ -10,7 +10,7 @@ export const setUserStatus = async (req, res) => {
         console.log(status);
         let user = req.user;
         console.log(user);
-        status.user = user;
+        status.user = user._id;
         status=calculateCalories(status);
         calculateMacros(status);
         status.weightTracker=[{weight:status.weight, date:new Date()}];
@@ -30,8 +30,12 @@ export const getUserStatus = async (req, res) => {
         console.log(user);
         if(user){
             let userStatus = await UserStatus.findOne({user:user});
-            userStatus = await userStatus.populate('user');
-            res.status(200).send(userStatus);
+            if(userStatus){
+                userStatus = await userStatus.populate('user');
+                res.status(200).send(userStatus);
+            } else {
+                res.status(404).send("User status not found");
+            }
         }
         else{
             res.status(400).send("User not found");
@@ -73,16 +77,20 @@ export const updateStatus = async (req,res)=>{
 export const updateStatusDite = async (req,res)=>{
     try{
 
-        let {foodAllergies,ditePreference,diteType} = req.body;
+        let {foodAllergies,dietPreference,dietType} = req.body;
         // Conver json to jsObject
-        let {_id}= await req.user;
+        let {_id}= req.user;
         let Status = await UserStatus.findOne({user:_id});
-        // Update status
-        Status.foodAllergies = foodAllergies;
-        Status.dietPreference = ditePreference;
-        Status.dietType = diteType;
-        await Status.save();
-        res.status(200).send("Status updated successfully");
+        if(Status){
+            // Update status
+            Status.foodAllergies = foodAllergies;
+            Status.dietPreference = dietPreference;
+            Status.dietType = dietType;
+            await Status.save();
+            res.status(200).send("Status updated successfully");
+        } else {
+            res.status(404).send("User status not found");
+        }
     }
     catch(err){
         console.log(err);

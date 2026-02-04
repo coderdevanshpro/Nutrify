@@ -6,7 +6,8 @@ import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
 
-dotenv.config('../.env');
+dotenv.config({ path: "../.env" });
+
 const apiKey = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 const fileManager = new GoogleAIFileManager(apiKey);
@@ -48,7 +49,7 @@ const generationConfig = {
   responseMimeType: "application/json",
 };
 const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash",
+  model: "gemini-3-flash-preview",
   generationConfig
 });
 
