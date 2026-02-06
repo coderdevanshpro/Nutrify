@@ -18,10 +18,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { nanoid } from '@reduxjs/toolkit';
-import {
-  Add,
-  SmartToy,
-} from "@mui/icons-material";
+import { Add, SmartToy, } from "@mui/icons-material";
 
 
 
@@ -59,6 +56,7 @@ export default function SideBar() {
         { path: "/doctor", icon: <Add />, label: "Doctor" },
         { path: "/voice", icon: <SmartToy />, label: "Voice" },
         { path: "/review", icon: <FeedbackIcon />, label: "Review" },
+        { path: "/calorie", icon: <FeedbackIcon />, label: "Calorie" },
     ];
 
     const getLinkClasses = (path) => {

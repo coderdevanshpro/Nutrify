@@ -20,6 +20,7 @@ import { useDispatch } from 'react-redux'
 import Voice from './pages/Voice.jsx'
 import { initializeUserState } from './features/User/user.js'
 import Doctor from './pages/Doctor.jsx'
+import CalorieChecker from './pages/CalorieChecker.jsx'
 
 
 // Testing 
@@ -97,6 +98,7 @@ function App() {
             <Route path='/profile' element={<Profile />} />
             <Route path='/diet' element={<Dite />} />
             <Route path='/review' element={<Review />} />
+            <Route path='/calorie' element={<CalorieChecker />} />
           </Route> 
           <Route element={<Privateroute user={!isLogin}/>}>
             <Route path='/register' element={<Form />} />
