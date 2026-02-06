@@ -1,0 +1,11 @@
+pandas
+numpy
+tensorflow
+opencv-python
+matplotlib
+seaborn
+ipython
+scikit-learn
+flask
+flask-cors
+cohere
