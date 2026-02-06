@@ -19,6 +19,7 @@ import { toast } from 'sonner'
 import { useDispatch } from 'react-redux'
 import Voice from './pages/Voice.jsx'
 import { initializeUserState } from './features/User/user.js'
+import Doctor from './pages/Doctor.jsx'
 
 
 // Testing 
@@ -89,6 +90,7 @@ function App() {
             {/* <Route path='/test' element={<Test/>} /> */}
             <Route path='/voice' element={<Voice />} />
             <Route path='/voice/:id' element={<Voice />} />
+            <Route path="/doctor" element={<Doctor />} />
             <Route path='/' element={<Home />} />
             <Route path='/meals/:id' element={<Meals />} />
             <Route path='/dashboard' element={<Dashboard />} />

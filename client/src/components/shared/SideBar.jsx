@@ -18,6 +18,12 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { nanoid } from '@reduxjs/toolkit';
+import {
+  Add,
+  SmartToy,
+} from "@mui/icons-material";
+
+
 
 import {
     AssessmentOutlined as DashboardIcon,
@@ -50,8 +56,9 @@ export default function SideBar() {
         { path: '/profile', icon: <TestsIcon />, label: 'Profile' },
         { path: '/diet', icon: <ProblemsIcon />, label: 'Diet Plan' },
         { path: `/meals/${user ? user._id : ""}`, icon: <CoursesIcon />, label: 'Meals' },
-        { path: '/review', icon: <FeedbackIcon />, label: 'Review' },
-        {path: '/voice',icon:<FeedbackIcon/>,label:'Voice'}
+        { path: "/doctor", icon: <Add />, label: "Doctor" },
+        { path: "/voice", icon: <SmartToy />, label: "Voice" },
+        { path: "/review", icon: <FeedbackIcon />, label: "Review" },
     ];
 
     const getLinkClasses = (path) => {
